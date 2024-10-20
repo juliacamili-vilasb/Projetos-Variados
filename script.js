@@ -1,14 +1,10 @@
-// Função que faz a contagem de vogais em uma string
-function contarVogais(str) {
-    const vogais = 'aeiouAEIOU';
-    return str.split('').reduce((contador, char) => {
-      if (vogais.includes(char)) {
-        contador++;
-      }
-      return contador;
-    }, 0);
+// Função para calcular a média de notas
+function calcularMedia(notas) {
+    if (!Array.isArray(notas) || notas.length === 0) return 0;
+    const soma = notas.reduce((acc, nota) => acc + nota, 0);
+    return soma / notas.length;
   }
   
   // Exemplo de uso
-  console.log(contarVogais("Hello World")); // Output: 3
-  
+  const notas = [8, 9, 7, 10];
+  console.log(calcularMedia(notas)); // Output: 8.
