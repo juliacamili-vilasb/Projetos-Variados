@@ -1,0 +1,10 @@
+{
+    "nome": "Josoé Felipe",
+    "sexo": "M",
+    "dorDeCabeca": "True",
+    "idade": 29,
+    "email": "testeJosoChule@gmail.com",
+    "habilidade": ["JavaScript", "Python", "HTML", "CSS"],
+    "cidade": "São Paulo"
+  }
+  

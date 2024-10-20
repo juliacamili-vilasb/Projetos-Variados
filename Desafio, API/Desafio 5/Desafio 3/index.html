@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Avaliação de Notas</h1>
+        <form id="formNota">
+            <div class="form-group">
+                <label for="nota">Digite a nota (0 a 100):</label>
+                <input type="number" id="nota" name="nota" min="0" max="100" required>
+            </div>
+            <button type="button" onclick="avaliarNota()">Avaliar Nota</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

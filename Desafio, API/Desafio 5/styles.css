@@ -1,0 +1,37 @@
+/* Reset básico para margens e preenchimentos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+}
+
+/* Estilo do container principal */
+.container {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título */
+h1 {
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+/* Estilo do parágrafo do resultado */
+#resultado {
+    font-size: 1.25em;
+    color: #004d40;
+}

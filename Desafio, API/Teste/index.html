@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last.fm Top Artists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .artist-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .artist-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .artist-item img {
+            max-width: 100px;
+            border-radius: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get Top Artists</h1>
+        <input type="text" id="userInput" placeholder="Enter Last.fm username">
+        <button id="searchButton">Search</button>
+        <ul id="artistList" class="artist-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

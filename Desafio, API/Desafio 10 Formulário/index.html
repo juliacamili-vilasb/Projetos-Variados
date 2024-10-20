@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Turístico da Cidade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Guia Turístico da Cidade</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('atracoes')">Atrações Turísticas</a></li>
+                <li><a href="#" onclick="showSection('sobre')">Sobre a Cidade</a></li>
+                <li><a href="#" onclick="showSection('contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        <!-- Seção Home -->
+        <section id="home" class="active">
+            <div class="texto-balão">
+            <h2>Bem-vindo!</h2>
+            <p>Descubra as maravilhas da nossa cidade, Num cantinho das Minas Gerais, nas cristas da Mantiqueira, encontra-se um pedaço do paraíso. Clima ameno na maior parte do ano, fontes de águas cristalinas, cachoeiras inesquecíveis e uma população, que no seu jeito interiorano de ser, torna-se extremamente receptiva. Esta é BUENO BRANDÃO.</p>
+        </section>
+
+        <!-- Seção Atrações Turísticas -->
+        <section id="atracoes">
+            <div class="texto-balão">
+            <h2>Atrações Turísticas</h2>
+            <ul>
+                <li>Mirante da Serrinha</li>
+                <li>Cachoeira do Machado I Pedacim du Céu</li>
+                <li>Cachoeira Santa Rita</li>
+                <li>Pedra do Cume</li>
+                <li>Mirante do Cristo Redentor</li>
+                
+            </ul>
+        </section>
+
+        <!-- Seção Sobre a Cidade -->
+        <section id="sobre">
+            <div class="texto-balão">
+            <h2>Sobre a Cidade</h2>
+            <p>A Situada no sul de Minas Gerais, Bueno Brandão é um refúgio natural conhecido por suas deslumbrantes paisagens e mais de 30 cachoeiras espalhadas pela região. A cidade oferece tranquilidade e aventura para todos os tipos de visitantes. Desde suas trilhas ecológicas até os banhos refrescantes em suas quedas d’água cristalinas, Bueno Brandão é o destino ideal para quem busca se reconectar com a natureza. Com uma rica cultura local e uma gastronomia típica mineira, o charme do interior está presente em cada esquina, fazendo de Bueno Brandão um lugar especial para relaxar, explorar e se encantar.</p>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato">
+            <form id="contactForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="successMessage" style="display: none; margin-top: 15px; color: green;">Mensagem enviada com sucesso!</div>
+        </section>
+        </section>
+        
+    </div>
+
+    <script>
+        // Função para mostrar a seção ativa
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active'); // Remove a classe ativa de todas as seções
+            });
+            document.getElementById(sectionId).classList.add('active'); // Adiciona a classe ativa à seção desejada
+        }
+
+        // Envio do formulário
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio do formulário padrão
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Aqui você chamaria a API, substitua a URL pelo endpoint da sua API
+            const apiUrl = 'https://sua-api-url.com/enviar'; 
+
+            // Dados a serem enviados
+            const data = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Enviando dados para a API
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na requisição');
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('successMessage').style.display = 'block'; // Exibe a mensagem de sucesso
+                document.getElementById('contactForm').reset(); // Limpa o formulário
+            })
+            .catch(error => {
+                alert('Ocorreu um erro: ' + error.message);
+            });
+        });
+    </script>
+</body>
+</html>

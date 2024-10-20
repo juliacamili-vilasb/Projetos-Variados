@@ -1,10 +1,10 @@
-// Função para calcular a média de notas
-function calcularMedia(notas) {
-    if (!Array.isArray(notas) || notas.length === 0) return 0;
-    const soma = notas.reduce((acc, nota) => acc + nota, 0);
-    return soma / notas.length;
+// Função que verifica se uma string é um palíndromo
+function ePalindromo(str) {
+    const strLimpa = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    const strInvertida = strLimpa.split('').reverse().join('');
+    return strLimpa === strInvertida;
   }
   
   // Exemplo de uso
-  const notas = [8, 9, 7, 10];
-  console.log(calcularMedia(notas)); // Output: 8.
+  console.log(ePalindromo("A man a plan a canal Panama")); // Output: true
+  

@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Usando a fonte Roboto */
+    background-color: #f4f4f4;
+}
+
+header {
+    background: rgba(17, 144, 29, 0.7);
+    color: #f5f5f4;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #f3f3f3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #132f13; /* Cor do hover */
+}
+
+section {
+    display: none; /* Oculta todas as seções inicialmente */
+    padding: 40px 20px;
+    color: #0a0a0a; /* Cor do texto principal */
+    background-size: cover;
+    background-position: center;
+    min-height: 400px; /* Altura mínima para as seções */
+    position: relative; /* Necessário para o posicionamento do formulário */
+}
+
+.active {
+    display: block; /* Exibe a seção ativa */
+}
+
+#home {
+    background-image: url('https://buenaventura.com.br/buenobrandao/gallery/bueno-brandao.jpg');
+}
+
+#atracoes {
+    background-image: url('https://i0.wp.com/documentodeviagem.com/wp-content/uploads/2023/05/cachoeira-dos-luis-bueno-brandao-2_edited.jpg?resize=800%2C600&ssl=1');
+}
+
+#sobre {
+    background-image: url('https://www.jornalomunicipio.com.br/wp-content/uploads/2023/10/bueno-brandao.jpg');
+}
+
+
+.texto-balão {
+    background: rgba(236, 238, 236, 0.853); /* Fundo semi-transparente para o balão */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    max-width: 800px; /* Largura máxima do balão */
+    margin: 0 auto; /* Centraliza o balão */
+}
+
+form {
+    background: rgba(131, 132, 131, 0.64); /* Fundo semi-transparente para o formulário */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: absolute; /* Para sobrepor ao fundo */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 400px; /* Largura máxima do formulário */
+    width: 90%; /* Largura total até o máximo */
+    margin-top: 20px; /* Espaço acima do formulário */
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #141313; /* Cor dos labels */
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #3d5887; /* Cor ao focar */
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #2ca932;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #05521a;
+}
+
+#successMessage {
+    display: none;
+    margin-top: 15px;
+    color: rgb(43, 76, 210);
+    font-weight: bold;
+    text-align: center; /* Centraliza a mensagem */
+}

@@ -1,0 +1,41 @@
+/* Estilo para o corpo da página */
+body {
+    background-color: #64916b; /* Cor de fundo verde claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+/* Estilo para o contêiner principal */
+.address-app {
+    background-color: #e0edc9; /* Cor de fundo verde muito claro */
+    padding: 40px;
+    border-radius: 15px; /* Arredondar os cantos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center;
+}
+
+/* Estilo para o campo de entrada */
+input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #2cb443; /* Borda verde escura */
+    border-radius: 4px; /* Arredondar os cantos da borda */
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #419d77; /* Cor de fundo verde médio */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    border-radius: 4px; /* Arredondar os cantos */
+    padding: 10px 20px;
+    cursor: pointer; /* Cursor de mãozinha ao passar o mouse */
+}
+
+button:hover {
+    background-color: #357a52; /* Cor verde escura ao passar o mouse */
+}

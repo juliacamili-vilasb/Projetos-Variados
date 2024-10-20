@@ -1,0 +1,114 @@
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3; /* Cor de fundo clara e neutra */
+    color: #333; /* Cor do texto escura para bom contraste */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #131921; /* Cor escura inspirada no logotipo da Amazon */
+    margin-top: 40px;
+    font-size: 2.5em; /* Tamanho do título maior */
+    font-weight: 700; /* Peso da fonte mais forte */
+}
+
+/* Estilizando o formulário de busca */
+form {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-input {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 2px solid #ddd; /* Cor do contorno em cinza claro */
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    width: 300px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: #f0c14b; /* Cor do foco em amarelo (cor da Amazon) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao foco */
+    outline: none;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #f0c14b; /* Cor de fundo do botão em amarelo */
+    border: none;
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6b33f; /* Cor do botão ao passar o mouse um tom mais escuro de amarelo */
+    transform: translateY(-2px);
+}
+
+#books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Estilizando os cartões dos livros */
+.book {
+    background: #fff; /* Cor de fundo branca */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    width: 240px;
+    text-align: center; /* Texto centralizado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+.book img {
+    border-radius: 5px; /* Bordas arredondadas nas imagens */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta a imagem para cobrir o container sem distorcer */
+}
+
+.book h2 {
+    font-size: 1.2em; /* Tamanho do título do livro */
+    margin: 10px 0;
+    color: #131921; /* Cor do título em marrom escuro */
+    font-weight: 500; /* Peso da fonte médio */
+}
+
+.book p {
+    font-size: 0.9em; /* Tamanho da fonte do texto */
+    color: #555; /* Cor do texto em cinza escuro */
+    margin: 0;
+    line-height: 1.5; /* Altura da linha mais espaçada */
+}
+
+
+

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e8f5e9; /* Verde muito claro */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Branco para contraste */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #388e3c; /* Verde mais forte */
+    font-size: 2.5em; /* Título grande */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 700; /* Negrito */
+    color: #2e7d32; /* Verde escuro */
+}
+
+input {
+    width: 60px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #a5d6a7; /* Verde claro */
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #43a047; /* Verde médio */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #388e3c; /* Verde mais forte no hover */
+}
+
+#resultados {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#resultados p {
+    background-color: #f1f8e9; /* Verde muito claro */
+    border: 1px solid #c8e6c9; /* Verde claro */
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px 0;
+}
